@@ -1,0 +1,265 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    background-color: #f0ffff;
+}
+
+img {
+    vertical-align: middle;
+}
+
+h1, h2, h3, ul, li, p {
+    margin: 0;
+    padding: 0;
+} 
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.btn-rec {
+    padding: 10px 30px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-image: linear-gradient(#7fff00, #f2f5f0);
+    border: 3px solid #396909;
+    border-radius: 20px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.key-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: sans-serif;
+    list-style: none;
+}
+
+.key-list__item:first-child{
+    font-weight: 700;
+}
+
+.window {
+    position: relative;
+    width: 780px;
+    height: 370px;
+    margin: 50px auto;
+}
+
+.code-box {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.code-box__img {
+    width: 780px;
+    height: 371px;
+    border: none;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.window__list {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 780px;
+    height: 370px;
+    list-style: none;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.window__item-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 390px;
+    height: 370px;
+    background-color: #765c48;
+    border: 1px solid #000;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: all 4s ease;
+}
+
+.window--active .window__item-left{
+    top: 0;
+    left: -393px;
+}
+
+.window__left-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 340px;
+    height: 340px;
+    /* background-color: #fff; */
+    background-image: linear-gradient(#fff, #dad8d8);
+    border: 2px solid #000;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.window__left-line, .window__right-line {
+    position: absolute;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    background-color: #000;
+    display: block;
+}
+
+.window__left-icon {
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 15px;
+    background-color: #000;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.window__item-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 390px;
+    height: 370px;
+    background-color: #765c48;
+    border: 1px solid #000;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: all 4s ease;
+}
+
+.window--active .window__item-right{
+    top: 0;
+    right: -393px;
+}
+
+.window__right-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 340px;
+    height: 340px;
+    background-image: linear-gradient(#fff, #dad8d8);
+    border: 2px solid #000;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.window__right-icon {
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    height: 15px;
+    background-color: #000;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.kitchen {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto;
+}
+
+.table {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -1500px;
+    transition: all 3s ease;
+}
+
+.kitchen--table .table {
+    top: 0;
+    left: 50px;
+}
+
+.table__img {
+    width: 1100px;
+    height: 500px;
+    background-color: transparent;
+}
+
+.bowl {
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    left: -700px;
+    transition: all 3s ease;
+}
+
+.kitchen--bowl .bowl {
+    top: 50px;
+    left: 378px;
+}
+
+.bowl__img, .bowl-second__img {
+    width: 100px;
+    height: 100px;
+}
+
+.bowl-second {
+    position: absolute;
+    z-index: 2;
+    top: -10px;
+    left: -700px;
+    transition: all 3s ease;
+}
+
+.kitchen--bowl .bowl-second {
+    top: -10px;
+    left: 400px;
+}
+
+.teapot {
+    position: absolute;
+    z-index: 2;
+    top: -53px;
+    left: -700px;
+    transition: all 3s ease;
+}
+
+.kitchen--teapot .teapot {
+    top: -53px;
+    left: 483px;
+}
+
+.teapot__img {
+    width: 180px;
+    height: 190px;
+}
+
+
+
+
